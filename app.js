@@ -5,6 +5,8 @@ let movies = [];
 function handleTyping(event) {
     // console.log(event)
     if (event.keyCode === 13) {
+        let movieArea = document.querySelector('.moviesArea');
+        movieArea.innerHTML='<img src="assets/LoadingGif.gif" alt="Loading"/>';
         searched = event.target.value;
         page = 1;
         fetchMovies(page);
