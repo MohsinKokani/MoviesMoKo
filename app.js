@@ -114,12 +114,16 @@ function updateMoviesArea() {
     movieArea.innerHTML = newMoviesArea.innerHTML;
 }
 const prevclick = () => {
+    let movieArea = document.querySelector('.moviesArea');
+    movieArea.innerHTML='<img src="assets/LoadingGif.gif" alt="Loading"/>';
     page-=1;
     if (page === 1) document.querySelector('.prev').style.visibility = 'hidden';
     else document.querySelector('.prev').style.visibility = 'visible';
     fetchMovies(page);
 }
 const nextclick = () => {
+    let movieArea = document.querySelector('.moviesArea');
+    movieArea.innerHTML='<img src="assets/LoadingGif.gif" alt="Loading"/>';
     page+=1;
     fetchMovies(page);
 }
