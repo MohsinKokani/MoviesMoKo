@@ -71,7 +71,7 @@ const fetchMovies = async (n) => {
         }).then((responseJson) => {
             if (responseJson.Response === 'False') {
                 movies = [];
-                document.querySelector('.moviesArea').innerHTML("No movies found");
+                document.querySelector('.moviesArea').innerHTML="No movies found";
                 return;
             }
             if (n === 1) document.querySelector('.prev').style.visibility = 'hidden';
